@@ -1,0 +1,54 @@
+ /* Apply the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple scrollbar styling for a more modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712; /* bg-gray-950 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151; /* bg-gray-700 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B5563; /* bg-gray-600 */
+        }
+
+        /* Custom Cursor Styles */
+        #cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background-color: #818cf8; /* indigo-400 */
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            top: 0;
+            left: 0;
+        }
+
+        #cursor-trail {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            background-color: rgba(129, 140, 248, 0.2); /* indigo-400 with 20% opacity */
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.2s ease-out, width 0.3s, height 0.3s;
+            top: 0;
+            left: 0;
+        }
+
+        /* Hover state for cursor */
+        body.cursor-hover #cursor-trail {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(129, 140, 248, 0.3); /* indigo-400 with 30% opacity */
+        }
