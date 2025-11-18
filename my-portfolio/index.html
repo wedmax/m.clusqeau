@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxime Clusqeau | Game Designer & Digital Artist</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            950: 'var(--surface-primary)',
+                            700: 'var(--surface-secondary)',
+                            600: 'var(--surface-tertiary)',
+                        },
+                        indigo: {
+                            400: 'var(--action-primary)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-950 text-gray-100 antialiased cursor-none">
 
     <!-- Custom Cursor Elements -->
@@ -29,11 +49,16 @@
                 <!-- Navigation Links -->
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
-                        <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-                        <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
-                        <a href="#experience" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
-                        <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="#about"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#projects"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#skills"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#experience"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#contact"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
             </div>
@@ -48,17 +73,21 @@
             <h1 class="text-5xl sm:text-7xl font-extrabold text-white leading-tight mb-4">
                 Maxime Clusqeau
             </h1>
-            <p class="text-2xl sm:text-3xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400 mb-8">
+            <p
+                class="text-2xl sm:text-3xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400 mb-8">
                 Game Designer & Digital Artist
             </p>
             <p class="max-w-3xl text-xl text-gray-200 mb-10">
-                Based in Zürich, I specialize in creating immersive game mechanics, 3D modeling, and crafting engaging interactive experiences. Currently a BA Game Design student at Zurich University of the Arts.
+                Based in Zürich, I specialize in creating immersive game mechanics, 3D modeling, and crafting engaging
+                interactive experiences. Currently a BA Game Design student at Zurich University of the Arts.
             </p>
             <div class="flex space-x-4">
-                <a href="#contact" class="bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl hover:bg-indigo-700 transition-all shadow-lg">
+                <a href="#contact"
+                    class="bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl hover:bg-indigo-700 transition-all shadow-lg">
                     Get In Touch
                 </a>
-                <a href="#projects" class="bg-gray-700 text-white font-medium py-3 px-6 rounded-xl hover:bg-gray-600 transition-all shadow-lg">
+                <a href="#projects"
+                    class="bg-gray-700 text-white font-medium py-3 px-6 rounded-xl hover:bg-gray-600 transition-all shadow-lg">
                     View Projects
                 </a>
             </div>
@@ -70,53 +99,72 @@
                 Selected <span class="text-indigo-400">Projects</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+
                 <!-- Project Card 1: Close-Out -->
-                <div class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/030712/4f46e5?text=Close-Out" alt="Close-Out Game" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
+                <div
+                    class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/030712/4f46e5?text=Close-Out" alt="Close-Out Game"
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Indie Action Game: "Close-Out"</h3>
                         <p class="text-indigo-400 text-sm font-medium mb-4">Game Designer (ZHdK)</p>
                         <p class="text-gray-300 text-sm mb-4">
-                            Led concept development, game mechanics, programming, 3D modeling, texturing, animation, and engine implementation. Also managed technical writing (GDDs) and musician cooperation.
+                            Led concept development, game mechanics, programming, 3D modeling, texturing, animation, and
+                            engine implementation. Also managed technical writing (GDDs) and musician cooperation.
                         </p>
                         <span class="inline-block bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full">Unity</span>
                         <span class="inline-block bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full">C#</span>
-                        <span class="inline-block bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full">Blender</span>
+                        <span
+                            class="inline-block bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full">Blender</span>
                     </div>
                 </div>
 
                 <!-- Project Card 2: The Banananing -->
-                <div class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/030712/4f46e5?text=The+Banananing" alt="The Banananing Interactive Film" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
+                <div
+                    class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/030712/4f46e5?text=The+Banananing"
+                        alt="The Banananing Interactive Film" class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Interactive Film: "The Banananing"</h3>
                         <p class="text-indigo-400 text-sm font-medium mb-4">Producer, Video Editor, Asst. Director</p>
                         <p class="text-gray-300 text-sm mb-4">
-                            Contributed to the full production pipeline, including direction, video editing, and visual effects for this interactive film.
+                            Contributed to the full production pipeline, including direction, video editing, and visual
+                            effects for this interactive film.
                         </p>
-                        <a href="http://banana.zhdk.ch" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">View Project &rarr;</a>
+                        <a href="http://banana.zhdk.ch" target="_blank" rel="noopener noreferrer"
+                            class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">View Project &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Project Card 3: ANACHRONIA -->
-                <div class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/030712/4f46e5?text=ANACHRONIA" alt="ANACHRONIA Exhibition" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
+                <div
+                    class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/030712/4f46e5?text=ANACHRONIA" alt="ANACHRONIA Exhibition"
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Exhibition: "ANACHRONIA"</h3>
-                        <p class="text-indigo-400 text-sm font-medium mb-4">Exhibiting Artist («MiU» Off-Space, Zürich)</p>
+                        <p class="text-indigo-400 text-sm font-medium mb-4">Exhibiting Artist («MiU» Off-Space, Zürich)
+                        </p>
                         <p class="text-gray-300 text-sm mb-4">
-                            Contributed a series of experimental photographs to the exhibition curated by Miroslava Tyrina.
+                            Contributed a series of experimental photographs to the exhibition curated by Miroslava
+                            Tyrina.
                         </p>
                     </div>
                 </div>
 
                 <!-- Project Card 4: GAMES PEOPLE PLAY -->
-                <div class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/030712/4f46e5?text=GAMES+PEOPLE+PLAY" alt="GAMES PEOPLE PLAY Exhibition" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
+                <div
+                    class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/030712/4f46e5?text=GAMES+PEOPLE+PLAY"
+                        alt="GAMES PEOPLE PLAY Exhibition" class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/600x400/030712/ffffff?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Exhibition: "GAMES PEOPLE PLAY"</h3>
-                        <p class="text-indigo-400 text-sm font-medium mb-4">Exhibiting Artist («STAGE» Gallery, Zürich)</p>
+                        <p class="text-indigo-400 text-sm font-medium mb-4">Exhibiting Artist («STAGE» Gallery, Zürich)
+                        </p>
                         <p class="text-gray-300 text-sm mb-4">
                             Exhibited a digital painting as part of the group show curated by Ekaterina Rubtsova.
                         </p>
@@ -132,7 +180,7 @@
                 Technical <span class="text-indigo-400">Skills</span>
             </h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-                
+
                 <!-- Skill Category: Game Dev -->
                 <div class="bg-gray-700/50 backdrop-blur-sm border border-gray-600/30 p-6 rounded-xl shadow-lg">
                     <h3 class="text-xl font-bold text-white mb-4">Game Development</h3>
@@ -141,7 +189,8 @@
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> C#</li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Blender 3D</li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Git</li>
-                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Visual Studio</li>
+                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Visual Studio
+                        </li>
                     </ul>
                 </div>
 
@@ -150,7 +199,8 @@
                     <h3 class="text-xl font-bold text-white mb-4">Graphics</h3>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Photoshop</li>
-                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Illustrator</li>
+                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Illustrator
+                        </li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> InDesign</li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Krita</li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Adobe CS</li>
@@ -161,8 +211,10 @@
                 <div class="bg-gray-700/50 backdrop-blur-sm border border-gray-600/30 p-6 rounded-xl shadow-lg">
                     <h3 class="text-xl font-bold text-white mb-4">Video & Audio</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> After Effects</li>
-                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Premiere Pro</li>
+                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> After Effects
+                        </li>
+                        <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Premiere Pro
+                        </li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Sony Vegas</li>
                         <li class="flex items-center"><span class="text-indigo-400 mr-2">&#10003;</span> Reaper</li>
                     </ul>
@@ -187,35 +239,39 @@
                 Career & <span class="text-indigo-400">Education</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
+
                 <!-- Work Experience Column -->
                 <div class="bg-gray-800/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-8">
                     <h3 class="text-2xl font-bold text-white mb-6">Work Experience</h3>
                     <div class="relative border-l-2 border-indigo-500 pl-8 space-y-10">
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">05/2022 - 12/2022</p>
                             <h4 class="text-lg font-semibold text-white">Graphic Designer</h4>
                             <p class="text-gray-300">Glaubenszentrum St. Margrethen</p>
                         </div>
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">07/2020 - 04/2023</p>
                             <h4 class="text-lg font-semibold text-white">Portrait Artist</h4>
                             <p class="text-gray-300">Freelance</p>
                         </div>
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">07/2019 - 08/2021</p>
                             <h4 class="text-lg font-semibold text-white">Assistant in IT, Graphics, & Management</h4>
                             <p class="text-gray-300">Municipal Polyclinic No. 6, Odesa</p>
                         </div>
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">03/2018 - 03/2019</p>
                             <h4 class="text-lg font-semibold text-white">Social Media Content Creator</h4>
                             <p class="text-gray-300">VK Groups, Odesa (Freelance)</p>
@@ -229,21 +285,24 @@
                     <div class="relative border-l-2 border-gray-700 pl-8 space-y-10">
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">Sep 2022 - Jun 2025</p>
                             <h4 class="text-lg font-semibold text-white">Bachelor of Arts in Design, Game Design</h4>
                             <p class="text-gray-300">Zurich University of the Arts</p>
                         </div>
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">Sep 2020 - Jul 2022</p>
                             <h4 class="text-lg font-semibold text-white">Bachelor of Informatics (Partial Record)</h4>
                             <p class="text-gray-300">Odesa Polytechnic National University</p>
                         </div>
                         <!-- Timeline Item -->
                         <div class="relative">
-                            <span class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
+                            <span
+                                class="absolute -left-10 h-4 w-4 rounded-full bg-gray-700 border-4 border-gray-950"></span>
                             <p class="text-sm text-gray-400 mb-1">Sep 2016 - Jun 2019</p>
                             <h4 class="text-lg font-semibold text-white">Informatics, Graphic Design, Animation</h4>
                             <p class="text-gray-300">"STEP" Computer Academy Odesa</p>
@@ -260,9 +319,11 @@
                 Get In <span class="text-indigo-400">Touch</span>
             </h2>
             <p class="max-w-xl mx-auto text-lg text-gray-300 mb-8">
-                I'm currently available for freelance opportunities and open to discussing new projects. Whether you have a question or just want to say hi, feel free to reach out.
+                I'm currently available for freelance opportunities and open to discussing new projects. Whether you
+                have a question or just want to say hi, feel free to reach out.
             </p>
-            <a href="mailto:maxime.clusqeau@outlook.com" class="inline-block bg-indigo-600 text-white font-medium text-lg py-4 px-8 rounded-xl hover:bg-indigo-700 transition-all shadow-lg">
+            <a href="mailto:maxime.clusqeau@outlook.com"
+                class="inline-block bg-indigo-600 text-white font-medium text-lg py-4 px-8 rounded-xl hover:bg-indigo-700 transition-all shadow-lg">
                 maxime.clusqeau@outlook.com
             </a>
             <p class="text-gray-400 mt-6">
@@ -305,10 +366,10 @@
             // Smoothly update trail position
             const deltaX = mouseX - trailX;
             const deltaY = mouseY - trailY;
-            
+
             trailX += deltaX * speed;
             trailY += deltaY * speed;
-            
+
             cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
 
             requestAnimationFrame(animate);
@@ -330,4 +391,5 @@
     </script>
 
 </body>
+
 </html>
