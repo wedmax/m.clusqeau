@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Manager</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea, button { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+    button { margin-top: 20px; background: #238636; color: white; border: none; padding: 12px; cursor: pointer; }
+    #status { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Portfolio Content Manager</h2>
+
+  <label>GitHub Personal Access Token</label>
+  <input type="password" id="token" placeholder="github_pat_...">
+
+  <label>Project Title</label>
+  <input type="text" id="title" placeholder="Project Name">
+
+  <label>Role</label>
+  <input type="text" id="role" placeholder="Technical Artist">
+
+  <label>Tags (comma-separated)</label>
+  <input type="text" id="tags" placeholder="Blender, Python, Shaders">
+
+  <label>Description</label>
+  <textarea id="desc" rows="4"></textarea>
+
+  <button onclick="publishProject()">Commit & Publish</button>
+  <p id="status"></p>
+
+  <script>
+    const OWNER = "wedmax"; // replace with your GitHub username if changed
+    const REPO = "portfolio"; // replace with your repository name
+    const FILE_PATH = "projects.json";
+
+    async function publishProject() {
+      const token = document.getElementById("token").value.trim();
+      const status = document.getElementById("status");
+
+      if (!token) {
+        status.textContent = "Error: Personal Access Token is required.";
+        status.style.color = "red";
+        return;
+      }
+
+      status.textContent = "Fetching current data...";
+      status.style.color = "black";
+
+      const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
+
+      try {
+        // Step 1: Fetch existing projects and current commit SHA
+        const getRes = await fetch(url, {
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Accept": "application/vnd.github+json"
+          }
+        });
+
+        let projects = [];
+        let sha = null;
+
+        if (getRes.ok) {
+          const fileData = await getRes.json();
+          sha = fileData.sha;
+          projects = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+        }
+
+        // Step 2: Append the new project
+        const newProject = {
+          id: document.getElementById("title").value.toLowerCase().replace(/\s+/g, "-"),
+          title: document.getElementById("title").value,
+          role: document.getElementById("role").value,
+          tags: document.getElementById("tags").value.split(",").map(t => t.trim()).filter(Boolean),
+          description: document.getElementById("desc").value
+        };
+
+        projects.unshift(newProject);
+
+        // Step 3: Base64 encode and commit back to repository
+        const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(projects, null, 2))));
+
+        const putRes = await fetch(url, {
+          method: "PUT",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: `Add project: ${newProject.title}`,
+            content: updatedContent,
+            sha: sha
+          })
+        });
+
+        if (putRes.ok) {
+          status.textContent = "Published successfully! GitHub Pages will update in 1 - 2 minutes.";
+          status.style.color = "green";
+        } else {
+          const err = await putRes.json();
+          status.textContent = `GitHub API Error: ${err.message}`;
+          status.style.color = "red";
+        }
+      } catch (err) {
+        status.textContent = `Network Error: ${err.message}`;
+        status.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
